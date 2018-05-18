@@ -16,9 +16,7 @@ import { Routes, RouterModule, Router } from '@angular/router';
 import { AuthGuard } from '../app/authenticate/auth.guard';
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'healthyCheck', component: HealthyCheckComponent, canActivate: [AuthGuard], children:[{
-    
-  }] },
+  { path: 'healthyCheck', component: HealthyCheckComponent, canActivate: [AuthGuard] },
   { path: 'dropcalls', component: DropcallsComponent },
   { path: 'badfetch', component: BadfetchComponent },
   { path: '**', component: LoginComponent }
